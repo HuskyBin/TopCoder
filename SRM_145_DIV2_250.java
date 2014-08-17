@@ -31,7 +31,7 @@ public class ImageDithering {
 		for (int i = 0; i < dithered.length(); i++) {
 			if (!colorMap.containsKey(dithered.charAt(i))) {
 				colorMap.put(dithered.charAt(i), true);
-			}
+			} 
 		}
 		int result = 0;
 		for (String str : screen) {
