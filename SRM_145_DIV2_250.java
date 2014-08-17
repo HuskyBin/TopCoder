@@ -23,24 +23,24 @@ import java.util.Map;
 import java.util.HashMap;
 
 public class ImageDithering {
-	public int count(String dithered, String[] screen) {
-		if (dithered == null || dithered.length() == 0 || screen == null || screen.length == 0) {
-			return 0;
-		}
-		Map<Character, Boolean> colorMap = new HashMap<>();
-		for (int i = 0; i < dithered.length(); i++) {
-			if (!colorMap.containsKey(dithered.charAt(i))) {
-				colorMap.put(dithered.charAt(i), true);
-			} 
-		}
-		int result = 0;
-		for (String str : screen) {
-			for (int i = 0; i < str.length(); i++) {
-				if (colorMap.containsKey(str.charAt(i))){
-					result++;
-				}
-			} 
-		}
-		return result;
-	}
+    public int count(String dithered, String[] screen) {
+        if (dithered == null || dithered.length() == 0 || screen == null || screen.length == 0) {
+		    return 0;
+	    }
+	    Map<Character, Boolean> colorMap = new HashMap<>();
+	    for (int i = 0; i < dithered.length(); i++) {
+		    if (!colorMap.containsKey(dithered.charAt(i))) {
+			    colorMap.put(dithered.charAt(i), true);
+		    } 
+	    }
+	    int result = 0;
+	    for (String str : screen) {
+		    for (int i = 0; i < str.length(); i++) {
+			    if (colorMap.containsKey(str.charAt(i))){
+				    result++;
+			    }
+		    } 
+	    }
+	    return result;
+    }
 }
