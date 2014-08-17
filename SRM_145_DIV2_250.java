@@ -39,7 +39,7 @@ public class ImageDithering {
 				if (colorMap.containsKey(str.charAt(i))){
 					result++;
 				}
-			}
+			} 
 		}
 		return result;
 	}
