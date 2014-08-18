@@ -19,6 +19,10 @@ String order(int numMales, int numFemales, int K)
 (be sure your method is public)
 */
 
+/**
+ * 思想： 用 链表来模拟环，用delete这个field 来表示当前这个node是否已经被删除，（但是实际不需要删除）因为我们最后需要恢复
+ * 出最后的答案（根据这个delete变量）， 最后如果delete为false，那么给点为M， 否则为F。
+ **/
 
 public class PeopleCircle {
      public String order(int numMales, int numFeamles, int K) {
